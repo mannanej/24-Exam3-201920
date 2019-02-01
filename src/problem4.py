@@ -3,9 +3,9 @@ Exam 3, problem 4.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Eddie Mannan.  January 2019.
          
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# DONE: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -271,6 +271,12 @@ def problem4(seq_of_seq, n):
       :type n:          int
       :rtype: int
     """
+    ########## My code only wants to check the first number, and not sure why
+    for k in range(len(seq_of_seq)):
+        for j in range(len(seq_of_seq[k])):
+            if is_prime(seq_of_seq[k][j]):
+                if is_prime((seq_of_seq[k][j])) < n:
+                    return seq_of_seq[k][j]
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).

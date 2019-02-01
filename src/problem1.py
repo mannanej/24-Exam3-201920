@@ -125,12 +125,17 @@ def problem1(n):
       :type n: int
       :rtype: int
     """
+    ########## Not sure how to add the total to the previous total
     total = 0
     while True:
-
+        if total < n:
+            total = total + (total - total + 1)
+        else:
+            break
+    return total
 
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # **** IMPORTANT ****:
     # We supplied a   fibonacci   function above.

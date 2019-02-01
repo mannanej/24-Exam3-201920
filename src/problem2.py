@@ -73,13 +73,17 @@ def shape(n):
 
     :type n: int
     """
+    ########### Not sure how to get the right of the stars to move to the left
     for k in range(n):
-        for j in range(n):
+        for t in range(n):
             print(k + 1, end='')
-        print('*')
-    print()
+        print('*', end='')
+        for j in range(k):
+            print(j + 1, end='')
+        print()
+
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
